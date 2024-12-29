@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einfaches Plattformspiel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="downloadScreen">
+        <h1>Download läuft...</h1>
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+    <div id="game">
+        <div id="player"></div>
+        <div class="platform" style="left: 50px; top: 150px;"></div>
+        <div class="platform" style="left: 150px; top: 250px;"></div>
+        <div class="platform" style="left: 250px; top: 350px;"></div>
+    </div>
+    <div id="gameOverScreen">
+        <h1>Game Over</h1>
+        <button id="restartButton">Restart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

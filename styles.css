@@ -1,100 +1,243 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* CSS Variables for Theme */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --accent-color: #FFC107;
+    --transition-speed: 0.3s;
+    --header-height: 70px;
+}
+
+/* Reset and General Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background: linear-gradient(to right, #ece9e6, var(--background-color));
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Utility Classes */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
 header {
-    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--primary-color);
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 1000;
 }
 
-nav ul {
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 1.5rem;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background var(--transition-speed), transform var(--transition-speed);
 }
 
+header nav ul li a:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+/* Section General Styles */
 section {
-    padding: 2rem;
-    border-bottom: 1px solid #ddd;
+    padding: 4rem 1rem;
+    background: var(--background-color);
+    position: relative;
+    overflow: hidden;
 }
 
 section h2 {
-    margin-top: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
-.project, .experience, .education {
-    margin-bottom: 1rem;
+/* Skills Section */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
 }
 
-.project a, .experience a, .education a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.project a:hover, .experience a:hover, .education a:hover {
-    text-decoration: underline;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 1rem;
-}
-
-input, textarea {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    margin-top: 1rem;
-    padding: 0.7rem;
-    background: #333;
+.skills .skill-item {
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--secondary-color);
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
-    background: #555;
+.skills .skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Projects Section */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-item {
+    width: calc(50% - 1rem);
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.project-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
 footer {
+    background: var(--primary-color);
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
-    background: #333;
-    color: #fff;
 }
 
 footer a {
-    color: #fff;
+    color: var(--accent-color);
     text-decoration: none;
+    transition: color var(--transition-speed);
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #fff;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .project-item {
+        width: 100%;
+    }
+
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .skills .skill-item {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
 }
