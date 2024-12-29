@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -91,9 +92,10 @@
             
             <label for="message">Nachricht:</label>
             <textarea id="message" name="message" required></textarea>
-            
+            <div class=button>
             <button type="submit">Absenden</button>
-        </form>
+			</div>
+		</form>
         <p>Oder kontaktieren Sie mich direkt per Email: <a href="mailto:markus.stu@outlook.de">markus.stu@outlook.de</a></p>
     </section>
     
