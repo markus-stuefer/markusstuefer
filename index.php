@@ -7,65 +7,26 @@
     <title>Markus Stuefer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Start of LiveChat (www.livechat.com) code -->
-    <script>
-    window.__lc = window.__lc || {};
-    window.__lc.license = 18962346;
-    window.__lc.integration_name = "manual_channels";
-    window.__lc.product_name = "livechat";;
-    (function(n, t, c) {
-        function i(n) {
-            return e._h ? e._h.apply(null, n) : e._q.push(n)
-        }
-        var e = {
-            _q: [],
-            _h: null,
-            _v: "2.0",
-            on: function() {
-                i(["on", c.call(arguments)])
-            },
-            once: function() {
-                i(["once", c.call(arguments)])
-            },
-            off: function() {
-                i(["off", c.call(arguments)])
-            },
-            get: function() {
-                if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load.");
-                return i(["get", c.call(arguments)])
-            },
-            call: function() {
-                i(["call", c.call(arguments)])
-            },
-            init: function() {
-                var n = t.createElement("script");
-                n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/tracking.js",
-                    t.head.appendChild(n)
-            }
-        };
-        !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
-    }(window, document, [].slice))
-    </script>
-    <noscript><a href="https://www.livechat.com/chat-with/18962346/" rel="nofollow">Chat with us</a>, powered by <a
-            href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-    <!-- End of LiveChat code -->
-
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language="javascript" type="text/javascript" src="markusstuefer.com\m.js"></script></head>
 
 <body>
     <header>
-        <h1>Markus Stuefer</h1>
-        <div class="center">
-        <div class="dropdown">
-  <span>Mmenu</span>
-  <div class="dropdown-content">
-    <a href="#">Home</a>
+<div class="topnav">
+    <h1><a href="#">Markus Stuefer</a></h1>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+   
+    <a href="#about">About</a>
     <a href="/html/beruf.html">Berufserfarung</a>
-    <a href="/games/">Spiele</a>
+    <a href="/games/">Spiele</a> 
+    <a href="#contact">Contact</a>
   </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
-        </div>
-
     </header>
     <div class="content">
         <section id="about">
@@ -161,6 +122,7 @@
         <p>&copy; 2024 Markus Stuefer</p>
         <p>Folgen Sie mir auf <a href="https://www.linkedin.com/in/markusstuefer" target="_blank">LinkedIn</a> und <a
                 href="https://github.com/markusstuefer" target="_blank">GitHub</a></p>
+                <a href="impressum.html">Impressum</a>
     </footer>
 </body>
 
