@@ -122,7 +122,20 @@ section h2 {
     text-transform: uppercase;
     margin-bottom: 2rem;
 }
-
+.ce{
+    list-style: none;
+}
+.content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        max-width: 800px; /* Begrenzung der Breite für bessere Lesbarkeit */
+        margin: 0 auto; /* Zentriert das Element in der Mitte der Seite */
+        padding: 20px; /* Fügt etwas Abstand hinzu */
+}
 /* Skills Section */
 .skills {
     display: grid;

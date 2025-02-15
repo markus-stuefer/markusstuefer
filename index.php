@@ -36,17 +36,26 @@
             </ul>
         </nav>
     </header>
-    
+    <div class="content">
     <section id="about">
         <h2>Über mich</h2>
-        <p>Hallo, ich bin Markus Stuefer, ein leidenschaftlicher Entwickler mit über 10 Jahren Erfahrung in der Softwareentwicklung. Ich habe an zahlreichen Projekten gearbeitet, die von kleinen Startups bis hin zu großen Unternehmen reichen. Meine Hauptkompetenzen liegen in der Webentwicklung, aber ich habe auch Erfahrung in der mobilen App-Entwicklung und der Datenanalyse.</p>
-        <p>Ich bin stets bestrebt, meine Fähigkeiten zu erweitern und auf dem neuesten Stand der Technik zu bleiben. In meiner Freizeit experimentiere ich gerne mit neuen Technologien und arbeite an Open-Source-Projekten.</p>
-        <p>Ich glaube fest daran, dass Technologie die Kraft hat, unser Leben zu verbessern, und ich strebe danach, innovative Lösungen zu entwickeln, die echten Mehrwert bieten.</p>
-    </section>
-    
+        <p>Hallo, ich bin Markus Stuefer, ein erfahrener Softwareentwickler mit einer Leidenschaftf&uuml;r innovative Technologien. 
+         <br>Seit &uuml;ber zehn Jahren arbeite ich in der Softwareentwicklung und habe Projekte f&uuml;r Startups sowie etablierte Unternehmen erfolgreich umgesetzt.
+         <br/>Meine Expertise liegt in der Webentwicklung, erg&auml;nzt durch fundierte Kenntnisse in der mobilen App-Entwicklung und Datenanalyse.
+        <br>Ich liebe es, mich st&auml;ndig weiterzuentwickeln und neue Technologien zu erforschen, um stets auf dem neuesten Stand zu bleiben.
+          <br />Mein Ziel ist es, durch kreative und effiziente L&ouml;sungen echten Mehrwert zu schaffen.
+           <br>Technologie ist f&uuml;r mich ein Werkzeug, um Prozesse zu optimieren und das Leben der Menschen zu verbessern.
+           <br /><br /></p>
     <section id="projects">
         <h2>Projekte</h2>
         <div class="project">
+<h1>Rocky Staging Env</h1>
+            <p>
+            Rocky Staging Env ist mein Open-Source-Projekt zur Einrichtung einer staging Umgebung auf Rocky Linux.
+            Es bietet eine optimierte Infrastruktur für Entwickler, um Anwendungen vor der Produktion in einer realitätsnahen Umgebung zu testen. 
+            Das Projekt enthält Skripte und Konfigurationen zur schnellen Bereitstellung einer stabilen und skalierbaren Testumgebung.
+            </p>
+            <a href="https://github.com/markus-stuefer/rocky-staging-env">Github</a
         </div>
         <div class="project">
         </div>
@@ -58,7 +67,7 @@
     
     <section id="skills">
         <h2 class="animate__animated animate__bounce">Fähigkeiten</h2>
-        <ul>
+        <ul class="ce">
             <li>HTML & CSS</li>
             <li>JavaScript (React, Vue.js, Angular)</li>
             <li>Backend-Entwicklung (Node.js, Express, Django)</li>
@@ -67,7 +76,7 @@
             <li>Cloud Services (AWS, Azure)</li>
             <li>Automatisierung und CI/CD (Jenkins, GitHub Actions)</li>
             <li>Server verwaltung</li>
-        </ul>
+        </ul>           
     </section>
     <section id="education">
         <h2>Ausbildung</h2>
@@ -98,7 +107,7 @@
 		</form>
         <p>Oder kontaktieren Sie mich direkt per Email: <a href="mailto:markus.stu@outlook.de">markus.stu@outlook.de</a></p>
     </section>
-    
+    </div>
     <footer>
         <p>&copy; 2024 Markus Stuefer</p>
         <p>Folgen Sie mir auf <a href="https://www.linkedin.com/in/markusstuefer" target="_blank">LinkedIn</a> und <a href="https://github.com/markusstuefer" target="_blank">GitHub</a></p>

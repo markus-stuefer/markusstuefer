@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#game {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: #cceeff;
+    border: 2px solid #000;
+    display: none; /* Hidden initially */
+}
+
+#player {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff3333;
+    bottom: 0;
+    left: 50px;
+}
+
+.platform {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: #333;
+}
+
+#downloadScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#downloadScreen h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#progressBarContainer {
+    width: 80%;
+    background-color: #444;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0;
+    background-color: #76c7c0;
+    transition: width 1s linear;
+}
+
+#gameOverScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Initially hidden */
+}
+
+#gameOverScreen h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
