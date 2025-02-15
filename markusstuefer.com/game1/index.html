@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einfaches Fangen-Spiel</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        canvas {
+            background-color: #87CEEB;
+        }
+
+        #scoreboard {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        #topScores {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="scoreboard">Punkte: 0</div>
+    <canvas id="gameCanvas" width="300" height="500"></canvas>
+    <div id="topScores">Lade Top-Scores...</div>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreboard = document.getElementById('scoreboard');
+
+        let basketX = canvas.width / 2 - 25;
+        const basketWidth = 50;
+        const basketHeight = 10;
+        const basketSpeed = 5;
+
+        let objectX = Math.random() * (canvas.width - 20);
+        let objectY = 0;
+        const objectSize = 20;
+        const objectSpeed = 3;
+
+        let score = 0;
+
+        function drawBasket() {
+            ctx.fillStyle = 'brown';
+            ctx.fillRect(basketX, canvas.height - basketHeight, basketWidth, basketHeight);
+        }
+
+        function drawObject() {
+            ctx.fillStyle = 'red';
+            ctx.fillRect(objectX, objectY, objectSize, objectSize);
+        }
+
+        function updateScoreboard() {
+            scoreboard.textContent = 'Punkte: ' + score;
+        }
+
+        function moveObject() {
+            objectY += objectSpeed;
+
+            if (objectY + objectSize > canvas.height) {
+                if (objectX > basketX && objectX < basketX + basketWidth) {
+                    score++;
+                    updateScoreboard();
+                    saveScore("Spieler", score);
+                }
+                resetObject();
+            }
+        }
+
+        function resetObject() {
+            objectX = Math.random() * (canvas.width - objectSize);
+            objectY = 0;
+        }
+
+        function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBasket();
+            drawObject();
+            moveObject();
+
+            requestAnimationFrame(update);
+        }
+
+        function moveBasket(e) {
+            if (e.key === 'ArrowRight' && basketX + basketWidth < canvas.width) {
+                basketX += basketSpeed;
+            } else if (e.key === 'ArrowLeft' && basketX > 0) {
+                basketX -= basketSpeed;
+            }
+        }
+
+        function saveScore(playerName, score) {
+            const xhr = new XMLHttpRequest();
+            const url = "save_score.php";
+            const params = "player_name=" + playerName + "&score=" + score;
+
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send(params);
+        }
+
+        function getScores() {
+            const xhr = new XMLHttpRequest();
+            const url = "get_scores.php";
+
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const scores = JSON.parse(xhr.responseText);
+                    displayScores(scores);
+                }
+            };
+            xhr.send();
+        }
+
+        function displayScores(scores) {
+            let topScores = document.getElementById('topScores');
+            topScores.innerHTML = "Top Scores:<br>";
+
+            scores.forEach(function(score) {
+                topScores.innerHTML += score.player_name + ": " + score.score + "<br>";
+            });
+        }
+
+        document.addEventListener('keydown', moveBasket);
+        update();
+        getScores();
+    </script>
+</body>
+</html>
