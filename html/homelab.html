@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Lab Projekt</title>
+    <link rel="stylesheet" href="h.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="con">
+            <div id="logo"></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.php">Home</a></li>
+                <!--<li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                -->
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    </section>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+
+    <h2>Ziele des Projekts</h2>
+    <ul>
+        <li>Aufbau eines leistungsfähigen Home Labs für Test- und Entwicklungszwecke</li>
+        <li>Verwaltung von Servern, Containern und Netzwerkinfrastrukturen</li>
+        <li>Bereitstellung einer sicheren Umgebung für Experimente mit neuen Technologien</li>
+        <li>Integration verschiedener IT-Dienste wie Webserver, Datenbanken, Virtualisierung und Automatisierung</li>
+        <li>Sicherstellung von Datenschutz und hoher Systemsicherheit</li>
+    </ul>
+
+    <h2>Technologie-Stack</h2>
+    <ul>
+        <li><strong>Hypervisor:</strong> Proxmox oder VMware ESXi</li>
+        <li><strong>Container-Technologie:</strong> Docker und Kubernetes</li>
+        <li><strong>Netzwerk:</strong> pfSense, VLANs und VPN-Integration</li>
+        <li><strong>Datenbank:</strong> PostgreSQL, MySQL und MongoDB</li>
+        <li><strong>Automatisierung:</strong> Ansible, Terraform, CI/CD-Pipelines</li>
+        <li><strong>Speicher:</strong> NAS- und SAN-Lösungen für zentralisierte Datenspeicherung</li>
+    </ul>
+
+    <h2>Netzwerkübersicht</h2>
+    <ul>
+        <li><strong>Core Netzwerk:</strong> Zentrale Steuerung und Verwaltung über pfSense Firewall und VLANs</li>
+        <li><strong>Management Netzwerk:</strong> Verwaltung von Servern, Hypervisoren und Infrastruktur</li>
+        <li><strong>Storage Netzwerk:</strong> Verbindung von NAS und Backup-Systemen</li>
+        <li><strong>IoT & Smart Home Netzwerk:</strong> Abgeschottete Umgebung für smarte Geräte</li>
+        <li><strong>Gästenetzwerk:</strong> Separates WLAN für Gäste mit restriktiven Zugriffseinstellungen</li>
+    </ul>
+
+    <h2>Netzwerk Topologie</h2>
+    <ul>
+        <li><strong>Router:</strong> pfSense Firewall für Netzwerksicherheit und Traffic Management</li>
+        <li><strong>Switches:</strong> VLAN-fähige Managed Switches zur Segmentierung der Netzwerke</li>
+        <li><strong>Server:</strong> Proxmox-Cluster mit virtualisierten Diensten und Containern</li>
+        <li><strong>NAS-System:</strong> Zentrale Speicherung und Backup-Lösung</li>
+        <li><strong>VPN:</strong> WireGuard/OpenVPN für externen sicheren Zugriff</li>
+    </ul>
+
+    <h2>Sicherheitsmaßnahmen</h2>
+    <ul>
+        <li>Firewall-Regeln zur Segmentierung des Netzwerks</li>
+        <li>VLAN-Trennung zur Begrenzung des Datenverkehrs</li>
+        <li>Intrusion Detection System (IDS) zur Erkennung von Angriffen</li>
+        <li>Automatische Backups und Redundanz für kritische Daten</li>
+    </ul>
+</body>
+</html>
