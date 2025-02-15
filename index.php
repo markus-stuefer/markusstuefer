@@ -55,18 +55,17 @@
 <body>
     <header>
         <h1>Markus Stuefer</h1>
-        <div class="con">
-        <nav>
-            <ul>
-                <li><a href="/html/beruf.html">Erfahrungen</a></li>
-                <li><a href="#education">Ausbildung</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <!-- <li><a href="/games">Spiele</a></li> -->
-                <li><a href="impressum.html">Impressum</a></li>
-                <!-- <li><a href="Stuefer_Markus_Bewerbung.pdf">Lebenslauf PDF</a></li>-->
-            </ul>
-        </nav>
+        <div class="center">
+        <div class="dropdown">
+  <span>Mmenu</span>
+  <div class="dropdown-content">
+    <a href="#">Home</a>
+    <a href="/html/beruf.html">Berufserfarung</a>
+    <a href="/games/">Spiele</a>
+  </div>
+</div>
         </div>
+
     </header>
     <div class="content">
         <section id="about">

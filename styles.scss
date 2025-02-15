@@ -73,37 +73,36 @@ header {
       
       header {
         background-color: #333;
-        color: #fff;
-        padding: 10px 0;
+        color: #000000;
+        display: block;
+        height: 50%;
+        text-align: center;
+        align-content: center;
+      }
+      .dropdown {
+
+        position: relative;
+        display: inline-block;
       }
       
-      #logo {
-        float: left;
-        font-size: 1.5em;
-      }
-      
-      nav {
-        float: right;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      
-        li {
-          display: inline-block;
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        display: inline-block;
           margin-left: 20px;
-      
-          a {
-            color: #555;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-            transition: background-color 0.3s;
-      
-            &:hover {
-              background-color: #dc8d8d;
-            }
-          }
+        a{
+            text-decoration:none;
+            color:  #fff;
         }
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
       }
     }
 /* Hero Section */
